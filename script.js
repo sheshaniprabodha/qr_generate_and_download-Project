@@ -29,13 +29,23 @@ function generateQR() {
 
 // Download the QR Code
 function downloadQR() {
-  const qrCodeImage = document.getElementById("qrcode").querySelector("img");
+  const qrElement = document.getElementById("qrcode");
+  const canvas = qrElement.querySelector("canvas");
+
+  if (!canvas) {
+    alert("QR Code not generated yet!");
+    return;
+  }
+
+  const image = canvas.toDataURL("image/png");
+
   const link = document.createElement("a");
 
   link.href = qrCodeImage.src;
   link.download = "qrcode.png";
-  link.click();
 
+  document.body.appendChild(link);
+  link.click();
   document.body.removeChild(link);
 }
 
