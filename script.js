@@ -37,11 +37,10 @@ function downloadQR() {
     return;
   }
 
-  const image = canvas.toDataURL("image/png");
+  //const image = canvas.toDataURL("image/png");
 
   const link = document.createElement("a");
-
-  link.href = qrCodeImage.src;
+  link.href = canvas.toDataURL("image/png");
   link.download = "qrcode.png";
 
   document.body.appendChild(link);
