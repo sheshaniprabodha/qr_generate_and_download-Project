@@ -1,0 +1,105 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  place-content: center;
+  height: 100vh;
+  background: linear-gradient(120deg, #32db81 0%, #7a5dd8 100%);
+}
+
+.WIappeI {
+  width: 700px;
+  background-color: white;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  font-size: 40px;
+  text-transform: uppercase;
+}
+
+.btn {
+  width: 300px;
+  border: none;
+  outline: none;
+  padding: 12px 20px;
+  margin-top: 40px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.download-btn {
+  background: #85d55a;
+  display: none;
+}
+
+.qr-btn {
+  background: #ecca52;
+}
+
+.reset-btn {
+  display: none;
+}
+
+input {
+  padding: 10px 20px 10px;
+  width: 100%;
+  border-radius: 20px;
+  border: 1px solid rgb(220, 220, 220);
+}
+
+#qrcode {
+  margin-top: 40px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .WIappeI {
+    width: 90%;
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .btn {
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  input {
+    width: 100%;
+  }
+
+  #qrcode img,
+  #qrcode canvas {
+    width: 250px !important;
+    height: 250px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .WIappeI {
+    width: 95%;
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  #qrcode img,
+  #qrcode canvas {
+    width: 200px !important;
+    height: 200px !important;
+  }
+}
